@@ -1,0 +1,145 @@
+/* Inicio - Tipografias de la pag  */
+body {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #FFC9D6;
+}
+header{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #FFB5CC;
+}
+.card-body{
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+/* fin - Tipografias de la pag  */
+
+#quienesomos_carousel-item{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+#quienesomos_carousel-item img {
+  
+  width: 100%; /* Esto establece el ancho de la imagen al 100% del contenedor */
+  height: 70vh; /* Puedes ajustar esto a la altura que prefieras */
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+#index_carousel-item img{
+    width: 100%;
+    height: 70vh;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+
+/* Texto justificado  */
+.text-justify {
+  text-align: justify !important;
+}
+
+/* Inico - Navbar */
+.bg-custom{
+  background-color: #E3A0B3;
+}
+
+.bg-custom-btn{
+  background-color: #E3A0B3;
+}
+
+.bg-custom-btn:hover {
+  background-color: #F8BAB3; /* Reemplaza con el color que prefieras */
+}
+/* Cambiar el color de fondo del item del dropdown al pasar el mouse */
+.dropdown-menu .dropdown-item:hover {
+  background-color: #f7c5bf97; /* Reemplaza 'tuColorDeseado' con el código de color que prefieras */
+}
+
+/* Cambiar el color de fondo del item del dropdown al hacer click */
+.dropdown-menu .dropdown-item:active {
+  background-color: #F8BAB3; /* Usa el mismo código de color aquí si deseas que sea igual al hover */
+}
+/* Inico Colores invertidos para bg de bottones */
+.bg-custom-btn-1{
+  background-color: #F8BAB3;
+}
+
+.bg-custom-btn-1:hover {
+  background-color: #E3A0B3; /* Reemplaza con el color que prefieras */
+}
+/* Fin Colores invertidos para bg de bottones */
+
+/* HEAD PUBLICITARIO */
+
+header p {
+    margin-bottom: 0px; /* Ajusta este valor según necesites */
+  }
+
+  @keyframes deslizarTexto {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-100%); }
+  }
+  
+  .texto-deslizante {
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    
+  }
+  
+  .texto-deslizante p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: deslizarTexto 43s linear infinite;
+  }
+
+  /*Fin - HEAD PUBLICITARIO */
+
+  /* Para controlar el tamano de la img de bienvenida  */
+  @media (min-width: 1300px) {
+    .img-contenido{
+      width: 50%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+}
+  
+  /* .img-container img {
+    
+    /*  width: auto;  Ajusta la imagen al ancho deseado o usa % si prefieres */
+    /* height: auto; /*  Mantiene la proporción de la imagen */
+    /* max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+  /* }
+/* 
+  @media (min-width: 1400px) {
+    .img-container img {
+      width: 100%;
+      margin: auto; 
+      
+      /* Reduce el tamaño máximo de la imagen a la mitad */
+      /* O puedes usar un ancho fijo, por ejemplo, width: 600px; 
+    }
+  }  */
+
+  /* Desaparece el titulo del navbar cuando la pantalla se hace muy chica  */
+  @media (max-width: 488px) {
+    .navbar-brand-custom {
+        display: none;
+    }
+}
+
+
+/* hover del logotipo */
+nav .logotipo .navbar-brand img:hover{
+  transform: scale(1.2);
+}
