@@ -17,11 +17,11 @@ login -> http://localhost/ProT3/login <br>
 
 Cuenta adm : 
 test_test@gmail.com
-asdasd123
+pw : asdasd123
 
 User cuenta : 
 test@gmail.com
-asdasd123
+pw : asdasd123
 
 
 -Desde ya muchas gracias. Hamm, Abdul
