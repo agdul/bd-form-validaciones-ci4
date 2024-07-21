@@ -143,3 +143,7 @@ header p {
 nav .logotipo .navbar-brand img:hover{
   transform: scale(1.2);
 }
+
+.table_size{
+  vertical-align: center;
+}

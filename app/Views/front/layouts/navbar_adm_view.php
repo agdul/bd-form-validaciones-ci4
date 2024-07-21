@@ -25,18 +25,23 @@
     <div class="collapse navbar-collapse" id="navbarsExample09">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-      <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle <?php echo ($currentPage == 'productos') ? 'active' : '' ?>" href="#" data-bs-toggle="dropdown" aria-expanded="false">CRUD</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Agregar producto</a></li>
-          </ul>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle <?php echo ($currentPage == 'productos') ? 'active' : '' ?>" href="#" data-bs-toggle="dropdown" aria-expanded="false">CRUD - Usuario</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="<?= base_url('dashboard');?>">Ver Usuarios</a></li>
+              <li><a class="dropdown-item" href="<?= base_url('add_user');?>">Agregar Usuario</a></li>
+            </ul>
+        </li>
+        
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle <?php echo ($currentPage == 'productos') ? 'active' : '' ?>" href="#" data-bs-toggle="dropdown" aria-expanded="false">CRUD - Productos</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Ver Producto</a></li>
+              <li><a class="dropdown-item" href="#">Agregar Producto</a></li>
+            </ul>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link <?php echo ($currentPage == 'quienes_somos') ? 'active' : '' ?>" href="#">Usuarios</a>
-        </li>
-
-        <li class="nav-item">
+      <li class="nav-item">
           <a class="nav-link <?php echo ($currentPage == 'login') ? 'active' : '' ?>" href="<?php echo base_url('cerrar_sesion')?>"> Cerrar Session</a>
         </li>
       </ul>

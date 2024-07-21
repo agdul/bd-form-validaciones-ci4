@@ -28,13 +28,25 @@ class UserModel extends Model{
     protected $updatedField  = 'fechaEdit_user';
     protected $deletedField  = 'fechaDeath_user';
 
+    public function all_users(){
+        return $this->where('status_user', 1)->findAll();
+    }
+
     public function user_exists($correo){
         $query = $this->where('correo_user', $correo)->get();
+        return $query->getNumRows() > 0;
+    }
+    public function user_exists_id($id){
+        $query = $this->where('id_user', $id)->get();
         return $query->getNumRows() > 0;
     }
 
     public function getUser($correo){
         return $this->where('correo_user', $correo)->first();
+    }
+
+    public function get_user_id($id){
+        return $this->where('id_user', $id)->first();
     }
 
     public function get_password($correo){
@@ -84,5 +96,11 @@ class UserModel extends Model{
             }
         }
         return false;// Credenciales Invalidas
+    }
+
+
+    public function update_user($id, $datos){
+
+        return $this->update($id, $datos);
     }
 }

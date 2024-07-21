@@ -8,12 +8,13 @@ $nivel = 0;
 <!-- Inicio del Head  -->
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo esc($t_head); ?></title>
-    <link href="<?php echo base_url("assets/css/bootstrap.min.css")?>" rel="stylesheet">
-    <link href=<?php echo base_url("assets/css/style.css")?> rel="stylesheet">
+    <link href="<?php echo base_url("assets/css/bootstrap.min.css") ?>" rel="stylesheet">
+    <link href=<?php echo base_url("assets/css/style.css") ?> rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -22,17 +23,17 @@ $nivel = 0;
        para los iconos del footer-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="icon" type="image/png" href="assets/img/serafina/mate.png">
-    <link rel="icon" type="image/png" href="<?php echo base_url('assets/img/serafina/mate.png')?>">
+    <link rel="icon" type="image/png" href="<?php echo base_url('assets/img/serafina/mate.png') ?>">
 </head>
 
 <header class="text-center">
     <div class="texto-deslizante">
-    <p>PAGOS EN EFECTIVO / TRANSFERENCIA 10% DE DESCUENTO || COMPRAS MAYORES A $25000 ENVIO GRATIS (CORRIENTES, CAPITAL)</p>
+        <p>PAGOS EN EFECTIVO / TRANSFERENCIA 10% DE DESCUENTO || COMPRAS MAYORES A $25000 ENVIO GRATIS (CORRIENTES, CAPITAL)</p>
     </div>
     <div class="text-center mx-auto img-contenido pb-2">
-    <img class="rounded img-fluid mx-auto d-block" src="<?php echo base_url("assets/img/serafina/bienvenida.jpeg") ?>" alt="Bienvenida">
+        <img class="rounded img-fluid mx-auto d-block" src="<?php echo base_url("assets/img/serafina/bienvenida.jpeg") ?>" alt="Bienvenida">
     </div>
-    
+
 </header>
 
 
@@ -40,14 +41,14 @@ $nivel = 0;
 
 <body>
     <!-- (0-Usuario || 1-Administrador) -->
-    <?php $nivel = $session->get('nivel')?>
-    <?php if($nivel == 0) :?>
+    <?php $nivel = $session->get('nivel') ?>
+    <?php if ($nivel == 0) : ?>
         <?php echo $this->include('front/layouts/navbar_view'); ?>
     <?php elseif ($nivel == 1) : ?>
         <?php echo $this->include('front/layouts/navbar_adm_view') ?>
-    <?php else :  ?>    
+    <?php else :  ?>
         <?php echo $this->include('front/layouts/navbar_view') ?>
-    <?php endif;?>
+    <?php endif; ?>
 
     <?php echo $this->renderSection('contenido'); ?>
 
@@ -65,7 +66,27 @@ $nivel = 0;
     </footer>
     <!-- fin del footer -->
 
-    <script src= "<?php echo base_url("assets/js/bootstrap.bundle.min.js")?>"> </script>
-    </body>
+    <script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js") ?>"> </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+    $('#staticBackdrop').on('show.bs.modal', function(event) {
+        var button = $(event.relatedTarget); // Botón que activó el modal
+        var userId = button.data('id'); // Obtener el ID del usuario
+        var nombreUsuario = button.data('name');
+        var nickName = button.data('nick');
+        var urlEliminar = '<?php echo base_url("delete_user"); ?>'; // Reemplaza con la ruta real
+        $('#userIdToDelete').text(userId); // Mostrar el ID en el modal
+        $('#userNombre').text(nombreUsuario);
+        $('#nickName').text(nickName);
+
+        // Asigna la URL de eliminación al botón
+        document.getElementById('eliminarUsuario').addEventListener('click', function() {
+            window.location.href = urlEliminar + '/' + userId;
+        });
+    });
+    });
+    </script>  
+</body>
 
 </html>

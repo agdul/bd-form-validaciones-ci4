@@ -2,14 +2,13 @@
 <?php echo $this->section('contenido'); ?>
 
 
-
-
-
-<div class="container">
-<h1>HOLA GOLA</h1>
-<?php var_dump($session->get('correo'))?>
-
-
-</div>
+<?php $nivel = $session->get('nivel')?>
+    <?php if($nivel == 0) :?>
+        <?php echo $this->include('front\layouts\productos_contenido'); ?> ?>
+    <?php elseif ($nivel == 1) : ?>
+        <?php echo $this->include('front\layouts\users_table') ?>
+    <?php else :  ?>    
+        <?php return false ?>
+    <?php endif;?>
 
 <?php echo $this->endSection(); ?>

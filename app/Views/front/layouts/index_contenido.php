@@ -24,7 +24,7 @@
 
     </section>
 
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleAutoplaying" class="carousel slide pb-5" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div id="index_carousel-item" class="carousel-item active">
                 <img src="assets\img\serafina\3.jpeg" class="d-block mx-auto" alt="...">
@@ -49,7 +49,7 @@
 
 
     <!-- PRODCUTOS -->
-    <section class="container mt-5">
+    <!-- <section class="container mt-5">
         <div class="row">
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mt-3 mb-3">
                 <div class="card" style="width: 18rem;">
@@ -93,7 +93,7 @@
             </div>
         </div>
 
-    </section>
+    </section> -->
     <!-- FIN-PRODUCTOS -->
     
 </div>
